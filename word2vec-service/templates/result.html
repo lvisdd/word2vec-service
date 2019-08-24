@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h2 class="h2-responsive">top-N most similar words</h2>
+        </div>
+    </div>
+</div>
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="https://d3js.org/">D3.js - demonstrates</a></h2>
+    </div>
+<!--
+    <div class="col-md-2">
+    </div>
+ -->
+    <div class="col-md-12">
+        <wordanimations></wordanimations>
+        <div id="wordanimations" class="form-group">
+            <svg></svg>
+        </div>
+    </div>
+ <!--
+    <div class="col-md-2">
+    </div>
+  -->
+</div>
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="http://nvd3.org/index.html">NVD3 - charts</a></h2>
+    </div>
+
+    <div class="col-md-4">
+        <treechart></treechart>
+    </div>
+
+    <div class="col-md-8">
+        <scatterchart></scatterchart>
+    </div>
+</div>
+
+<hr class="extra-margins">
+
+<!--
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="http://mpld3.github.io/index.html">mpld3 charts</a></h2>
+    </div>
+
+    <div class="col-md-4">
+    </div>
+
+    <div class="col-md-8">
+        <div id="mpld3">{{ fig_to_html | safe }}</div>
+    </div>
+</div>
+
+<hr class="extra-margins">
+ -->
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html">scikit-learn - Comparing different clustering algorithms</a></h2>
+        <h2 class="h2-responsive">, <a href="http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html">Flow Chart</a></h2>
+    </div>
+
+    <div class="col-md-12">
+        <div style="text-align: center">
+            <img id="cluster_comparison" width="75%" height="75%">
+        </div>
+        <cluster_comparison></cluster_comparison>
+    </div>
+
+</div>
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive">{{ clustering_name }}</h2>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-8">
+        <clustering></clustering>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+</div>
+
+<hr class="extra-margins">
+
+<!--
+<div class="row">
+  -->
+    <!--
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="http://tech.nitoyon.com/ja/blog/2013/11/07/k-means/">D3.js - Clustering</a></h2>
+    </div>
+
+    <div class="col-md-12">
+
+        <div id="kmeans">
+            <div>
+                <svg></svg>
+            </div>
+            <div class="md-form">
+                <button id="step" class="btn btn-indigo" >STEP</button>
+                <button id="restart" class="btn btn-cyan" disabled="">FIRST</button>
+            </div>
+            <fieldset style="display: inline; margin: .8em 0 1em 0; border: 1px solid #999; padding: .5em">
+                <div class="md-form">
+                    <label for="N">N (node):</label>
+                    <input type="number" id="N" min="2" max="1000" value="100">
+                </div>
+                <div class="md-form">
+                    <label for="K">K (cluster):</label>
+                    <input type="number" id="K" min="2" max="50" value="5">
+                </div>
+                <div class="md-form">
+                    <button id="reset" class="btn btn-cyan">NEW</button>
+                </div>
+            </fieldset>
+        </div>
+     -->
+    <!--
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-8">
+        <clustering></clustering>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+</div>
+ -->
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="https://www.jasondavies.com/wordcloud/">D3.js - Word Cloud</a></h2>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-10">
+        <wordcloud></wordcloud>
+    </div>
+
+</div>
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="divider-new">
+        <h2 class="h2-responsive"><a href="https://threejs.org/examples/css3d_periodictable.html">three.js css3d - periodic table.</a></h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <!--
+        <div class="jumbotron">
+        <div class="col-md-12">
+         -->
+        <div id="periodictable">
+            <div id="container"></div>
+            <!--
+            <div id="container"></div>
+            <div id="info"><a href="http://threejs.org" target="_blank">three.js css3d</a> - periodic table. <a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank">info</a>.</div>
+             -->
+            <div id="menu">
+                <button id="table">TABLE</button>
+                <button id="sphere">SPHERE</button>
+                <button id="helix">HELIX</button>
+                <button id="grid">GRID</button>
+            </div>
+        </div>
+        <!--
+        </div>
+        </div>
+         -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <periodictable></periodictable>
+    </div>
+</div>
+
+<hr class="extra-margins">
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/tags/treechart.tag" type="riot/tag"></script>
+<script src="/static/tags/scatterchart.tag" type="riot/tag"></script>
+<script src="/static/tags/cluster_comparison.tag" type="riot/tag"></script>
+<script src="/static/tags/clustering.tag" type="riot/tag"></script>
+<script src="/static/tags/wordcloud.tag" type="riot/tag"></script>
+<script src="/static/tags/wordanimations.tag" type="riot/tag"></script>
+<script src="/static/tags/periodictable.tag" type="riot/tag"></script>
+<script>
+     var positives = decodeURI({{ positives | safe}}).split(",");
+     var negatives = decodeURI({{ negatives | safe}}).split(",");
+     var topn = {{ topn }};
+     var clustering_name = "{{ clustering_name }}";
+     var n_clusters = {{ n_clusters }};
+     riot.mount('treechart, scatterchart, cluster_comparison, clustering, wordcloud, wordanimations, periodictable', {
+         positives: positives,
+         negatives: negatives,
+         topn: topn,
+         clustering_name: clustering_name,
+         n_clusters: n_clusters,
+     })
+</script>
+{% endblock %}

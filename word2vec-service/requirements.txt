@@ -1,1 +1,9 @@
-flask
+Flask==0.11.1
+cf-deployment-tracker==1.0.2
+gensim
+matplotlib==1.4.3
+mpld3
+numpy
+pandas
+scikit-learn
+scipy

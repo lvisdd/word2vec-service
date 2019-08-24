@@ -1,0 +1,10 @@
+.gitignore
+bin
+obj
+venv
+__pycache__
+LICENSE
+README.md
+web.config
+web.debug.config
+word2vec-service.pyproj

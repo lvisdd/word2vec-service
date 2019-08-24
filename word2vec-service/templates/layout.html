@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - word2vec Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/css/mdb.min.css" />
+    <!-- 
+    <link rel="stylesheet" href="http://nvd3.org/assets/css/nv.d3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css" />
+     -->
+    <link rel="stylesheet" type="text/css" href="/static/content/nv.d3.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 100%;
+      }
+    </style>
+</head>
+<body class='with-3d-shadow with-transitions'>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-dark primary-color-dark">
+            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="container">
+                <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                    <a class="navbar-brand" href="/" target="_blank">word2vec Service</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('search') }}">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container body-content">
+            <hr />
+            {% block content %}{% endblock %}
+            <hr />
+        </div>
+    </main>
+    <footer class="page-footer center-on-small-only primary-color-dark">
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                <p>&copy; {{ year }} - word2vec Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/riot/2.6.4/riot+compiler.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <!--
+    <script type="text/javascript" src="http://nvd3.org/assets/js/nv.d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.js"></script>
+     -->
+    <script type="text/javascript" src="/static/scripts/nv.d3.js"></script>
+    <script type="text/javascript" src="/static/scripts/d3.layout.cloud.js"></script>
+    <script src="/static/scripts/three.js"></script>
+    <script src="/static/scripts/tween.min.js"></script>
+    <script src="/static/scripts/TrackballControls.js"></script>
+    <script src="/static/scripts/CSS3DRenderer.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

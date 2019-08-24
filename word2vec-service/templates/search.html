@@ -1,0 +1,57 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h2 class="h2-responsive">most_similar</h2>
+            <p class="lead">Find the top-N most similar words. Positive words contribute positively towards the similarity, negative words negatively.</p>
+            <p><a href="https://radimrehurek.com/gensim/models/word2vec.html#gensim.models.word2vec.Word2Vec.most_similar" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+<hr class="extra-margins">
+
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <most_similar></most_similar>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/tags/most_similar.tag" type="riot/tag"></script>
+<script>
+    riot.mount('most_similar', {
+        title: 'most_similar',
+        positives: [
+            { word: 'king' },
+            { word: 'woman' },
+            { word: '' },
+        ],
+        negatives: [
+            { word: 'man' },
+            { word: '' },
+        ],
+        topn: 10,
+        clustering_names: [
+            { name: 'KMeans' },
+            { name: 'MiniBatchKMeans' },
+            { name: 'AffinityPropagation' },
+            { name: 'MeanShift' },
+            { name: 'SpectralClustering' },
+            { name: 'Ward' },
+            { name: 'AgglomerativeClustering' },
+            { name: 'DBSCAN' },
+            { name: 'Birch' },
+        ],
+        n_clusters: 3,
+    })
+</script>
+{% endblock %}

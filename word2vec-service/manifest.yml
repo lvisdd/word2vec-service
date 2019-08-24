@@ -1,0 +1,7 @@
+---
+applications:
+- name: word2vec-service
+  host: word2vec-service-${random-word}
+  memory: 512M
+  instances: 1
+  path: .
